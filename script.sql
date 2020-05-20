@@ -15,9 +15,13 @@ ALTER TABLE `data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   
 
-INSERT INTO `data` (`info`) VALUES ('PRUEBA');
-INSERT INTO `data` (`info`) VALUES ('PRUEBA');
-INSERT INTO `data` (`info`) VALUES ('PRUEBA');
-INSERT INTO `data` (`info`) VALUES ('PRUEBA');
-INSERT INTO `data` (`info`) VALUES ('PRUEBA');
-INSERT INTO `data` (`info`) VALUES ('PRUEBA');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA1');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA2');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA3');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA4');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA5');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA6');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA7');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA8');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA9');
+INSERT INTO `data` (`info`) VALUES ('PRUEBA10');

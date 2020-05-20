@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-sm-8"><h2><b>Agregar</b></h2></div>
                     <div class="col-sm-4">
-                        <a href="index.php" class="btn btn-info add-new"><i class="fa fa-arrow-left"></i> Regresar</a>
+                        <a href="index.php" class="btn btn-info add-new"><i class="fa fa-arrow-left"></i> Inicio</a>
                     </div>
                 </div>
             </div>
@@ -42,14 +42,17 @@
 				<div class="<?php echo $class?>">
 				<?php echo $message;?>
 				</div>	
+				<?php
+				echo '<script type="text/javascript"> setTimeout(()=>window.location="index.php", 1000); </script>';
+				?>
 			<?php
 			}
 			?>
 			<div class="row">
 				<form method="post">
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<label>Información:</label>
-						<textarea  name="direccion" id="direccion" class='form-control' maxlength="255" required></textarea>
+						<textarea  name="info" id="info" class='form-control area-create' maxlength="255" required></textarea>
 					</div>
 					<div class="col-md-12">
 					<hr>

@@ -25,9 +25,9 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>Información</b></h2></div>
+                    <div class="col-sm-8"><h2><b>Información:</b></h2></div>
                     <div class="col-sm-4">
-                        <a href="index.php" class="btn btn-info add-new"><i class="fa fa-arrow-left"></i> Regresar</a>
+                        <a href="index.php" class="btn btn-info add-new"><i class="fa fa-arrow-left"></i> Inicio</a>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
 					if($res){
 						$message= "Datos actualizados con éxito";
 						$class="alert alert-success";
-						
+						echo '<script type="text/javascript"> setTimeout(()=>window.location="index.php", 1000); </script>';
 					} else {
 						$message="No se pudieron actualizar los datos";
 						$class="alert alert-danger";
@@ -56,9 +56,8 @@
 					?>
 			<div class="row">
 				<form method="post">
-					<div class="col-md-6">
-						<label>Información:</label>
-						<input type="text" name="info" id="info" class='form-control' maxlength="255" required  value="<?php echo $datos_cliente->info;?>">
+					<div class="col-md-12">
+						<textarea name="info" id="info" class='form-control area-update' maxlength="255" required><?php echo $datos_cliente->info; ?></textarea>
 						<input type="hidden" name="id_info" id="id_info" class='form-control' maxlength="100"   value="<?php echo $datos_cliente->id;?>">
 					</div>
 					<div class="col-md-12 ">

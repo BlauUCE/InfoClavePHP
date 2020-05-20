@@ -19,7 +19,7 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>Datos</b></h2></div>
+                    <div class="col-sm-8"></div>
                     <div class="col-sm-4">
                         <a href="create.php" class="btn btn-info add-new"><i class="fa fa-plus"></i>Agregar</a>
                     </div>
@@ -31,8 +31,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Registro</th>
-                        <th>Acciones</th>
+                        <th class="text.center"><b>DATOS</b></th>
                     </tr>
                 </thead>
 				<?php 
@@ -47,18 +46,40 @@
                             $info=$row->info;
                     ?>
                             <tr>
-                                <td><?php echo $info;?></td>
                                 <td>
+                                <div class="pull-right" style="border-left: 1px solid blue">
                                     <a href="update.php?id=<?php echo $id;?>" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                    <a href="delete.php?id=<?php echo $id;?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                    <a href="delete.php?id=<?php echo $id;?>" class="delete" title="Eliminar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a><br>
+                                </div>
+                                <div class="pull-left" style="border-right: 1px solid blue">
+                                    <?php
+                                        echo $contador;
+                                    ?>
+                                </div>
+                                <br>
+                                <div class="info">
+                                    <?php
+                                    $text = str_replace("\r\n",'<br>',$info);
+                                     echo $text;
+                                    ?>
+                                </div>
                                 </td>
                             </tr>	
                     <?php
+                            $contador=$contador+1;
                         }
                     ?>                          
                 </tbody>
             </table>
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"></div>
+                    <div class="col-sm-4">
+                        <a href="create.php" class="btn btn-info add-new"><i class="fa fa-plus"></i>Agregar</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>     
+    </div> 
 </body>
 </html>                            
